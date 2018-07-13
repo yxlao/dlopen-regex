@@ -3,7 +3,10 @@
 
 using namespace std;
 
-regex reg_in_foo(".*");
+regex regex_foo(".*");
 smatch result_in_foo;
 
-extern "C" int get_val() { return 1; }
+extern "C" int get_val() {
+  regex_search("hello", regex_foo);
+  return 1;
+}

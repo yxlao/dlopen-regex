@@ -6,9 +6,10 @@
 
 using namespace std;
 
+regex reg(".*");
+smatch result;
+
 int main(int argc, char** argv) {
-  regex reg(".*");
-  smatch result;
   string lib_path = "libfoo.so";
   void* handle = dlopen(lib_path.c_str(), RTLD_NOW | RTLD_LOCAL);
   cout << "Done" << endl;
